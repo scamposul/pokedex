@@ -1,0 +1,1 @@
+scpokedex.netlify.app
