@@ -1,1 +1,1 @@
-scpokedex.netlify.app
+https://scpokedex.netlify.app/
