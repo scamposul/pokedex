@@ -21,11 +21,7 @@ const PokemonDetail = () => {
   const navigate = useNavigate();
   return (
     <div className={styleBox}>
-<<<<<<< HEAD
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png" alt="" width={"20%"} onClick={() => navigate("/pokedex")} />
-=======
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png" alt="" width={'20%'} onClick={() => navigate('/pokedex')}/>
->>>>>>> b1cce68a41bab75a3b43eb6817941548b3357118
       <div className="all">
         <div className="pokemonInfo">
           <div className="bigger">

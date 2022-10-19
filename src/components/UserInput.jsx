@@ -14,6 +14,7 @@ const UserInput = () => {
     navigate("/pokedex");
   };
 
+  const newLocal = <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a2e856d1-b7d1-4b70-ad6f-724be1ffc7b7/de6xo20-7594a7b9-49ab-4ed4-b759-b352e7801780.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyZTg1NmQxLWI3ZDEtNGI3MC1hZDZmLTcyNGJlMWZmYzdiN1wvZGU2eG8yMC03NTk0YTdiOS00OWFiLTRlZDQtYjc1OS1iMzUyZTc4MDE3ODAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yhMR3vPVgAkIqSFh4L-V0-NedrcA23p1oHtRcHJFsTs" className="oak" />;
   return (
     <div className="userInput">
       <h1>Welcome to the world of Pokémon!</h1>
@@ -30,14 +31,7 @@ const UserInput = () => {
         </button>
       </div>
       <br />
-<<<<<<< HEAD
-      <img
-        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a2e856d1-b7d1-4b70-ad6f-724be1ffc7b7/de6xo20-7594a7b9-49ab-4ed4-b759-b352e7801780.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyZTg1NmQxLWI3ZDEtNGI3MC1hZDZmLTcyNGJlMWZmYzdiN1wvZGU2eG8yMC03NTk0YTdiOS00OWFiLTRlZDQtYjc1OS1iMzUyZTc4MDE3ODAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yhMR3vPVgAkIqSFh4L-V0-NedrcA23p1oHtRcHJFsTs"
-        className="oak"
-      />
-=======
-      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a2e856d1-b7d1-4b70-ad6f-724be1ffc7b7/de6xo20-7594a7b9-49ab-4ed4-b759-b352e7801780.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyZTg1NmQxLWI3ZDEtNGI3MC1hZDZmLTcyNGJlMWZmYzdiN1wvZGU2eG8yMC03NTk0YTdiOS00OWFiLTRlZDQtYjc1OS1iMzUyZTc4MDE3ODAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yhMR3vPVgAkIqSFh4L-V0-NedrcA23p1oHtRcHJFsTs" className="oak" />
->>>>>>> b1cce68a41bab75a3b43eb6817941548b3357118
+      {newLocal}
       <h3>Name: {input}</h3>
     </div>
   );
