@@ -1,0 +1,1 @@
+https://scpokedex.netlify.app/
