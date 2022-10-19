@@ -14,7 +14,6 @@ const Pokedex = () => {
   const [nameInput, setNameInput] = useState("");
   const [pokemon, setPokemon] = useState({});
 
-
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?limit=1150&offset=0")
@@ -29,10 +28,8 @@ const Pokedex = () => {
     axios
       .get(`https://pokeapi.co/api/v2/type/`)
       .then((res) => setTypeList(res.data.results));
-      
   }, []);
 
-  console.log(typeList);
 
   const searchName = () => {
     navigate(`/pokedex/${nameInput}`);
@@ -46,12 +43,15 @@ const Pokedex = () => {
   const pokemonPerPage = 10;
   const firstPokemonIndex = page * pokemonPerPage;
   const lastPokemonIndex = firstPokemonIndex + pokemonPerPage;
-  const pokemonPaginated = pokemonList.slice(firstPokemonIndex, lastPokemonIndex);
+  const pokemonPaginated = pokemonList.slice(
+    firstPokemonIndex,
+    lastPokemonIndex
+  );
 
   const totalPages = Math.trunc(pokemonList.length / pokemonPerPage) - 1;
   const pagesNumbers = [];
 
-  for(let i = 1; i <= totalPages; i++) {
+  for (let i = 1; i <= totalPages; i++) {
     pagesNumbers.push(i);
   }
 
@@ -59,19 +59,31 @@ const Pokedex = () => {
     <div className="pokedex">
       <h1>Pokedex</h1>
       <p>Welcome {name}</p>
-      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+      <button
+        onClick={() => setPage(page - 1)}
+        disabled={page === 1}
+        className="nextPrev"
+      >
         Previous page
       </button>
-      {
-        pagesNumbers.map(number => (
-          <button onClick={() => setPage(number)} key={number}>{number}</button>
-        ))
-      }
-      <button onClick={() => setPage(page + 1)} disabled={page === totalPages}>
+      {pagesNumbers.map((number) => (
+        <button
+          onClick={() => setPage(number)}
+          key={number}
+          className="pagButtons"
+        >
+          {number}
+        </button>
+      ))}
+      <button
+        onClick={() => setPage(page + 1)}
+        disabled={page === totalPages}
+        className="nextPrev"
+      >
         Next Page
       </button>
       <br />
-      <select onChange={(e) => searchType(e.target.value)}>
+      <select onChange={(e) => searchType(e.target.value)} className='selector'>
         {typeList.map((type) => (
           <option value={type.url} key={type.url}>
             {type.name}
@@ -84,9 +96,9 @@ const Pokedex = () => {
         placeholder="search by name"
         value={nameInput}
         onChange={(e) => setNameInput(e.target.value)}
-        className='pokedexInput'
+        className="pokedexInput"
       />
-      <button onClick={searchName}>Search</button>
+      <button onClick={searchName} className='searchButton'>Search</button>
       <ul className="list">
         {pokemonPaginated.map((pokemon) => (
           <li key={pokemon.url}>

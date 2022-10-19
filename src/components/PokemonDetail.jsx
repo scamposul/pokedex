@@ -19,10 +19,9 @@ const PokemonDetail = () => {
   }, [id]);
 
   const navigate = useNavigate();
-
   return (
     <div className={styleBox}>
-      <img src="src\components\logo.webp" alt="" width={'20%'} onClick={() => navigate('/pokedex')}/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png" alt="" width={"20%"} onClick={() => navigate("/pokedex")} />
       <div className="all">
         <div className="pokemonInfo">
           <div className="bigger">
@@ -47,10 +46,7 @@ const PokemonDetail = () => {
             </div>
             <div className="middle">
               <div className="nameId">
-                <h3>{pokemon.name}</h3>
-                <p>
-                  <b>#{id}</b>
-                </p>
+                <h3>{pokemon.name} <b>#{id}</b></h3>
               </div>
             </div>
           </div>
@@ -80,19 +76,19 @@ const PokemonDetail = () => {
         </div>
         <div className="moves">
           <h3>Movements</h3>
-          <ul>{pokemon.moves?.[0].move.name}</ul>
-          <ul>{pokemon.moves?.[2].move.name}</ul>
-          <ul>{pokemon.moves?.[3].move.name}</ul>
-          <ul>{pokemon.moves?.[4].move.name}</ul>
-          <ul>{pokemon.moves?.[5].move.name}</ul>
-          <ul>{pokemon.moves?.[6].move.name}</ul>
-          <ul>{pokemon.moves?.[7].move.name}</ul>
-          <ul>{pokemon.moves?.[8].move.name}</ul>
-          <ul>{pokemon.moves?.[9].move.name}</ul>
-          <ul>{pokemon.moves?.[10].move.name}</ul>
-          <ul>{pokemon.moves?.[11].move.name}</ul>
-          <ul>{pokemon.moves?.[12].move.name}</ul>
-          <ul>{pokemon.moves?.[13].move.name}</ul>
+          <ul>{pokemon.moves?.[0]?.move.name}</ul>
+          <ul>{pokemon.moves?.[2]?.move.name}</ul>
+          <ul>{pokemon.moves?.[3]?.move.name}</ul>
+          <ul>{pokemon.moves?.[4]?.move.name}</ul>
+          <ul>{pokemon.moves?.[5]?.move.name}</ul>
+          <ul>{pokemon.moves?.[6]?.move.name}</ul>
+          <ul>{pokemon.moves?.[7]?.move.name}</ul>
+          <ul>{pokemon.moves?.[8]?.move.name}</ul>
+          <ul>{pokemon.moves?.[9]?.move.name}</ul>
+          <ul>{pokemon.moves?.[10]?.move.name}</ul>
+          <ul>{pokemon.moves?.[11]?.move.name}</ul>
+          <ul>{pokemon.moves?.[12]?.move.name}</ul>
+          <ul>{pokemon.moves?.[13]?.move.name}</ul>
         </div>
       </div>
     </div>

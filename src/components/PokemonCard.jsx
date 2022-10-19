@@ -20,12 +20,10 @@ const PokemonCard = ({ url }) => {
   return (
     <div onClick={toDetail} className={style}>
       <img src={pokemon.sprites?.front_default} alt="" />
-      <br />
-      <h3>{pokemon.name}</h3>
+      <p><b>{pokemon.name}</b></p>
       <b>
         Types: {pokemon.types?.[0]?.type.name}, {pokemon.types?.[1]?.type.name}
       </b>
-      <br />
       <div className="stats">
         <b>{pokemon.stats?.[0].stat.name}</b>: {pokemon.stats?.[0].base_stat}
         <b>{pokemon.stats?.[1].stat.name}</b>: {pokemon.stats?.[1].base_stat}
